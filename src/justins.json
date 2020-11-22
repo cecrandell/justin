@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Ramen",
+      "image": "https://mtv.mtvnimages.com/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/01/tumblr_mdhlr7emX21qidpl6o1_500-1422569237.png?quality=.8&height=367&width=500",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "name": "Sunglasses",
+      "image": "https://gl-images.condecdn.net/image/yQJrxzB4B8V/crop/200/square/f/78383001-glamour-11may16-getty-b.jpg",
+      "clicked": false
+    },
+    {
+      "id": 3,
+      "name": "Corn",
+      "image": "https://www.washingtonblade.com/content/files/2017/09/Justin_Timberlake_insert_courtesy_Twitter.jpg",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "name": "Short",
+      "image": "https://www.biography.com/.image/t_share/MTE5NDg0MDU0NzIxNDMxMDU1/justin-timberlake-201200-1-402.jpg",
+      "clicked": false
+    },
+    {
+      "id": 5,
+      "name": "Earrings",
+      "image": "https://cdn-img.instyle.com/sites/default/files/styles/640x768/public/images/2015/TRANSFORMATIONS/1999-justin-timberlake-567.jpg?itok=-ri0Ncxy",
+      "clicked": false
+    },
+    {
+      "id": 6,
+      "name": "Beard",
+      "image": "https://s3.r29static.com//bin/entry/35a/720x864,85/1918133/image.webp",
+      "clicked": false
+    },
+    {
+      "id": 7,
+      "name": "Hat",
+      "image": "https://media.npr.org/assets/artslife/arts/2010/10/justin-timberlake/justin-timberlake-71104f63c572c3cf3f53a4bd201dbda546662482-s800-c85.jpg",
+      "clicked": false
+    },
+    {
+      "id": 8,
+      "name": "Older",
+      "image": "https://static.playbill.com/9c/c5/3495252f4baea39b989495e7eebf/justin-timberlake-hr.jpeg",
+      "clicked": false
+    },
+    {
+      "id": 9,
+      "name": "Smolder",
+      "image": "https://blogocosa.com/wp-content/uploads/2019/08/justin-timberlake-hairstyle-likable-50-justin-timberlake-hairstyles-men-hairstyles-world-pictures.jpg",
+      "clicked": false
+    },
+    {
+      "id": 10,
+      "name": "Ray Bans",
+      "image": "https://www.menshairstylestoday.com/wp-content/uploads/2016/05/Justin-Timberlake-Hairstyle.jpg",
+      "clicked": false
+    },
+    {
+      "id": 11,
+      "name": "Bow Tie",
+      "image": "https://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2015/TRANSFORMATIONS/2010-justin-timberlake-567.jpg?itok=QVeP2XQ1",
+      "clicked": false
+    },
+    {
+      "id": 12,
+      "name": "Sexyback",
+      "image": "https://p2d7x8x2.stackpathcdn.com/wordpress/wp-content/uploads/2014/01/url7.jpeg",
+      "clicked": false
+    }
+  ]
+  
