@@ -1,6 +1,6 @@
 ## Justin
 
-<!-- ![](images/Justin.gif) -->
+![](images/Justin.gif)
 
 **What does this application do and why?**
 
