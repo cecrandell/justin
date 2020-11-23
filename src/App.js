@@ -14,61 +14,61 @@ class App extends React.Component {
     topscore: 0
   };
 
-  shuffle = (array) => array.sort(() => Math.random() - 0.5);
+  shuffle = data => {
+    let i = data.length - 1;
+    while (i > 0) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = data[i];
+      data[i] = data[j];
+      data[j] = temp;
+      i--;
+    }
+    return data;
+  };
 
   reset = (justins) => {
-    for (var i = 0; i < justins.length; i++) {
-      justins[i].clicked = false;
-    }
-    this.setState({
-      justins
-    });
-  }
-
-  endGame = () => {
-    this.setState({
-      justins,
-      message: "You lose! Click a Justin to play again!",
-      score: 0
-    });
-    this.reset(justins);
-  }
-
-  winGame = () => {
-    this.setState({
-      justins,
-      message: "You win! Click a Justin to play again!",
-      score: 0
-    });
-    this.reset(justins);
-  }
-
-  topScore = (score) => {
-    if (this.state.topscore <= score - 1) {
-      return true;
-    }
-  }
+    const resetData = justins.map(item => ({ ...item, clicked: false }));
+    return this.shuffle(resetData);
+  };
 
   checkJustin = id => {
-    if (this.state.score === 12) {
-      this.winGame();
-    }
-    if (justins[id - 1].clicked === false) {
-      justins[id - 1].clicked = true;
-      this.shuffle(justins);
-      this.setState({
-        justins,
-        message: "You guessed correctly!",
-        score: this.state.score + 1,
-      });
-      if (this.state.topscore <= this.state.score) {
+    let guessedCorrectly = false;
+    const newData = this.state.justins.map(item => {
+      const newItem = { ...item };
+      if (newItem.id === id) {
+        if (!newItem.clicked) {
+          newItem.clicked = true;
+          guessedCorrectly = true;
+        }
+      }
+      return newItem;
+    });
+    if (guessedCorrectly === true) {
+      const { topscore, score } = this.state;
+      const newScore = score + 1;
+      const newTopScore = Math.max(newScore, topscore);
+      if (newScore === 12) {
         this.setState({
-          topscore: this.state.topscore + 1
+          justins: this.reset(newData),
+          message: "You won!",
+          score: 0,
+          topscore: newTopScore
+        });
+      } else {
+        this.setState({
+          justins: this.shuffle(newData),
+          message: "You guessed correctly!",
+          score: newScore,
+          topscore: newTopScore
         });
       }
-      return justins[id - 1].clicked;
+    } else {
+      this.setState({
+        justins: this.reset(newData),
+        message: "You lose! Click a Justin to play again!",
+        score: 0
+      });
     }
-    this.endGame();
   }
 
   render() {
